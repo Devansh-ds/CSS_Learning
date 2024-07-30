@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Roboto+Slab:wght@100..900&display=swap");
+
+body {
+  padding: 10%;
+  font-size: 1.5rem;
+  font-family: "Roboto Slab";
+}
+
+a {
+  text-decoration: none;
+  cursor: not-allowed;
+  color: green;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: blue;
+  opacity: 0.5;
+  font-size: 36px;
+}
+
+a:active {
+  color: red;
+}
