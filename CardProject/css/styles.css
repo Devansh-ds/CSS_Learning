@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ||   utility class */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 1.5rem "Nunito", sans-serif;
+  min-height: 100vh;
+
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #1e293b;
+  color: whitesmoke;
+  text-align: center;
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-bottom: 2px solid #000;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a:any-link {
+  color: #000;
+}
+
+nav :is(a:hover, a:focus) {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active {
+  color: red;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+footer {
+  bottom: 0;
+}
+
+.Card {
+  scroll-margin-top: 8rem;
+  width: min(100%, 350px);
+  background-color: #cbd5e1;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card:target {
+  border: 2px solid purple;
+}
+
+.Card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Card img {
+  border: 5px double #333;
+  border-radius: 50%;
+}
+
+.Card figcaption {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+  main {
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+  }
+  .Card {
+    width: min(100%, 400px);
+  }
+
+  .Card:last-child {
+    order: -1;
+  }
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+  nav {
+    display: none;
+  }
+  .Card {
+    width: min(100%, 325px);
+  }
+  .Card figure {
+    flex-flow: column-reverse;
+  }
+  .Card figcaption {
+    margin: 0.1em 0;
+  }
+  .card p {
+    margin-top: 1rem;
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+}
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
